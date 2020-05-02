@@ -1,0 +1,118 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2.0.0" author="daria.s">
+        <insert tableName="phones">
+            <column name="phone_number" value="111111111"/>
+            <column name="verification_code" value="34f3fdeff4"/>
+            <column name="confirmation" value="CONFIRMED"/>
+        </insert>
+
+        <insert tableName="phones">
+            <column name="phone_number" value="222222222"/>
+            <column name="verification_code" value="w3rw3rw3r3"/>
+            <column name="confirmation" value="CONFIRMED"/>
+        </insert>
+
+        <insert tableName="phones">
+            <column name="phone_number" value="333333333"/>
+            <column name="verification_code" value="hrh432ewfrewr"/>
+            <column name="confirmation" value="NOT_CONFIRMED"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2.0.1" author="daria.s">
+        <insert tableName="users">
+            <column name="id" value="1"/>
+            <column name="username" value="admin"/>
+            <column name="password" value="$2y$12$gpS0HEbHKEvaaiOj13kGB.mHTyOGtLBWG3Surh3rClSSGLpRS7UGC"/>
+            <column name="status" value="ACTIVE"/>
+            <column name="phone_id" value="1"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="2"/>
+            <column name="username" value="moder"/>
+            <column name="password" value="$2y$12$hSzWfQed5ltriwAlaqWXDOHVZU8wiNw8vYftjKqLxEvRue3ZjHtam"/>
+            <column name="status" value="ACTIVE"/>
+            <column name="phone_id" value="2"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" value="3"/>
+            <column name="username" value="firstuser"/>
+            <column name="password" value="$2y$12$TcVk3oKdnSH.eYqLHUNEKeHXUvfU34cVwJXRgRi4cCIEqxWy6S6VW"/>
+            <column name="status" value="APPROVAL_REQUIRED"/>
+            <column name="phone_id" value="3"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2.0.3" author="daria.s">
+        <insert tableName="roles">
+            <column name="name" value="ROLE_ADMIN"/>
+        </insert>
+
+        <insert tableName="roles">
+            <column name="name" value="ROLE_MODERATOR"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="name" value="ROLE_USER"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2.0.4" author="Andranik.Mikhailyan">
+        <insert tableName="skill">
+            <column name="id" value="1"/>
+            <column name="name" value="java"/>
+        </insert>
+
+        <insert tableName="skill">
+            <column name="id" value="2"/>
+            <column name="name" value="c#"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2.0.5" author="daria.s">
+        <insert tableName="user_roles">
+            <column name="user_id" value="1"/>
+            <column name="role_id" value="1"/>
+        </insert>
+
+        <insert tableName="user_roles">
+            <column name="user_id" value="2"/>
+            <column name="role_id" value="2"/>
+        </insert>
+
+        <insert tableName="user_roles">
+            <column name="user_id" value="3"/>
+            <column name="role_id" value="3"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2.0.6" author="daria.s">
+        <insert tableName="account">
+            <column name="id" value="1"/>
+        </insert>
+
+    </changeSet>
+
+    <changeSet id="2.0.7" author="daria.s">
+        <insert tableName="developer">
+            <column name="id" value="1"/>
+            <column name="first_name" value="Nik"/>
+            <column name="last_name" value="Tor"/>
+            <column name="specialty" value="c# dev"/>
+            <column name="account_id" value="1"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="2.0.8" author="daria.s">
+        <insert tableName="developer_skill">
+            <column name="developer_id" value="1"/>
+            <column name="skill_id" value="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

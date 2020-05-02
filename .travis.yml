@@ -1,0 +1,11 @@
+# https://docs.travis-ci.com/user/languages/java/
+language: java
+jdk: openjdk8
+
+# Notifications https://docs.travis-ci.com/user/notifications/
+notifications:
+  email:
+    recipients:
+      - darkdern@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: always
