@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Lucivarushka/RestApiSecurity.svg?branch=master)](https://travis-ci.org/Lucivarushka/RestApiSecurity)
+[![Build Status](https://travis-ci.org/Lucivarushka/SpringSecurityRestApi.svg?branch=master)](https://travis-ci.org/Lucivarushka/SpringSecurityRestApi)
 
 
 Необходимо реализовать REST API, которое взаимодействует с БД и позволяет выполнять CRUD операции со следующими сущносятми:
