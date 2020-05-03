@@ -2,10 +2,15 @@
 
 
 Необходимо реализовать REST API, которое взаимодействует с БД и позволяет выполнять CRUD операции со следующими сущносятми:
+
 User (id, username, password, created, updated, lastPasswordChangeDate, Status status, String phoneNumber)
+
 Skill (id, name)
-Developer (id, firstName, lastName, specialty, Set<Skill> skills, Account account).
+
+Developer (id, firstName, lastName, specialty, Set<Skill> skills, Account account)
+  
 Account(id, accountData)
+
 enum Status {... ACTIVE, APPROVAL_REQUIRED, DELETED, BANNED ...} 
 
 Требования:
